@@ -1,0 +1,169 @@
+:root {
+	/* primary */
+	--Violet: hsl(257, 40%, 49%);
+	--Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+
+	height: 100%;
+	margin: 0;
+
+	background-color: var(--Violet);
+
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper {
+	height: 100vh;
+	width: 375px;
+
+	box-sizing: border-box;
+	padding: 30px 20px;
+
+	background-color: var(--Violet);
+	background-image: url(../images/bg-mobile.svg);
+	background-repeat: no-repeat;
+}
+
+.huddle__header {
+	height: 100px;
+
+	display: flex;
+	justify-content: flex-start;
+}
+.huddle__logo {
+	width: 150px;
+	height: 37px;
+}
+
+
+.huddle__thumbnail {
+	width: 335px;
+}
+.huddle__thumbnailImage{
+	width: 100%;
+}
+
+
+.huddle__mainContent {
+	margin-top: 50px;
+
+	text-align: center;
+	color: #fff;
+}
+
+.huddle__title {
+	font-family: 'Poppins', sans-serif;
+	font-size: 26px;
+}
+
+.huddle__button {
+	box-sizing: border-box;
+	padding: 10px 20px;
+	width: 200px;
+
+	border: none;
+	color: var(--Violet);
+
+
+	border-radius: 20px;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+}
+.huddle__button:hover {
+	background-color: var(--Soft-Magenta);
+	color: #fff;
+}
+
+
+.huddle__socialMedia {
+	margin-top: 50px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.huddle__icons {
+	width: 40px;
+	height: 40px;
+
+	font-size: 20px;
+	text-decoration: none;
+
+	border: 1px solid #fff;
+	border-radius: 50%;
+	color: #fff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-right: 15px;
+}
+.huddle__icons:hover {
+	border-color: var(--Soft-Magenta);
+	color: var(--Soft-Magenta);
+}
+
+
+	/*media queries*/
+@media (min-width: 1200px) { 
+
+	body {
+		height: 100vh;
+		align-items: center;
+	}
+	
+	.wrapper {
+		width: 1440px;
+		height: 800px;
+
+		background-image: url(../images/bg-desktop.svg);
+
+		display: grid;
+		grid-template: 100px 1fr 100px / 1fr 1fr;
+		grid-template-areas: "header header" "thumbnail mainContent" "footer footer";
+	}
+
+	.huddle__header {
+		grid-area: header;
+	}
+
+	.huddle__thumbnail {
+		grid-area: thumbnail;
+		width: 100%;
+	}
+
+
+	.huddle__mainContent {
+		grid-area: mainContent;
+
+		text-align: left;
+
+		box-sizing: border-box;
+		padding-left: 50px;
+		padding-right: 182px;
+	}
+
+	.huddle__title {
+		font-size: 2em;
+		padding-right: 113px;
+	}
+
+	.huddle__button {
+		width: 150px;
+		margin-top: 10px;
+	}
+
+	.huddle__socialMedia {
+		grid-area: footer;
+		justify-self: flex-end;
+	}
+
+}
+
+
+
